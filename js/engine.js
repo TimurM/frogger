@@ -190,9 +190,9 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/rock11.png',
+        'images/char-boy.png',
         // 'images/rock.png',
-        // 'images/char-cat-girl.png',
+        'images/rock11.png',
         'images/wood_plank.png',
         'images/car2.png'
     ]);
