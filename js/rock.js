@@ -1,7 +1,7 @@
 var Rock = function(x, y) {
   Enemy.call(this, x, y);
   // this.sprite = 'images/rock1.png';
-  this.sprite = 'images/wood_plank.png';
+  this.sprite = 'images/rock.png';
 }
 
 Rock.prototype = Object.create(Enemy.prototype);
