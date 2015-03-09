@@ -192,7 +192,7 @@ var Engine = (function(global) {
         'images/enemy-bug.png',
         'images/rock11.png',
         // 'images/rock.png',
-        'images/char-cat-girl.png',
+        // 'images/char-cat-girl.png',
         'images/wood_plank.png',
         'images/car2.png'
     ]);
