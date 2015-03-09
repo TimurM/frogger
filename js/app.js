@@ -1,10 +1,19 @@
+var currentScore = 0; 
+
 var genWaterItems = function() {
   var waterItems = [];
 
   for(var i = 0; i < 2; i++) {
     var x = i * 180 + 50*i;
     var y = Math.floor(Math.random() * 2)*90 + 45;
-    var newRock = new Wood(x, y);
+    var newWood = new Wood(x, y);
+    waterItems.push(newWood);
+  }
+
+  for(var i = 0; i < 2; i++) {
+    var x = i * 180 + 50*i;
+    var y = Math.floor(Math.random() * 2)*90;
+    var newRock = new Rock(x, y);
     waterItems.push(newRock);
   }
   return waterItems;
@@ -37,7 +46,8 @@ document.addEventListener('keyup', function(e) {
         37: 'left',
         38: 'up',
         39: 'right',
-        40: 'down'
+        40: 'down',
+        32: 'space_bar'
     };
     player.handleInput(allowedKeys[e.keyCode]);
 });
