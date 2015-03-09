@@ -194,7 +194,6 @@ var Engine = (function(global) {
         'images/rock.png',
         'images/wood_plank.png',
         'images/car2.png'
-        // 'images/car2.png'
     ]);
     Resources.onReady(init);
 
