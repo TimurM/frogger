@@ -1,13 +1,14 @@
 var Player = function() {
   this.sprite = 'images/char-boy.png';
   this.x = 250;
-  this.y = 450;
+  this.y = 495;
 }
 
 
 Player.prototype.update = function(dt) {
   setInterval(this.render(), dt);
   player.checkCollisions();
+  player.checkWin();
   player.checkSafeItem();
 }
 
@@ -24,34 +25,36 @@ Player.prototype.checkCollisions = function() {
   })
 }
 
+Player.prototype.checkWin = function() {
+  if ((key.x - player.x) < 10 && (key.x - player.x) > -10 && Math.abs(player.y - key.y) < 30) {
+    player.reset();
+  }
+}
+
 Player.prototype.checkSafeItem = function() {
   var player = this;
   var safe = false;
   allWaterItems.forEach(function(item) {
     // if((item.x - player.x) < 5 && (item.x - player.x) > -120 && (player.y - item.y) < 30 && (player.y - item.y) > 1){
-    if((item.x - player.x) < 5 && (item.x - player.x) > -110 && (player.y - item.y) < 50 && (player.y - item.y) > 1){
+    if((item.x - player.x) < 25 && (item.x - player.x) > -100 && (player.y - item.y) < 50 && (player.y - item.y) > 1){
       safe = true;
       player.x += item.speed*2;
     }
   })
 
-  if(player.y < 180 && !safe) {
+  if(player.y < 225 && player.y > 53 && !safe) {
     player.reset()
   }
 }
 
 Player.prototype.reset = function(x, y) {
-  this.y = y || 450;
+  this.y = y || 495;
   this.x = x || 250;
 }
 
 Player.prototype.handleInput = function(key) {
-  if(key === 'up') {
-    if(this.y < 20) {
-      this.reset();
-    } else {
+  if((key === 'up') && (this.y > 20)) {
       this.y -= 30;
-    }
   }else if((key === 'down') && (this.y < 460)) {
     this.y += 30;
   }else if((key === 'left') && (this.x > 0)) {

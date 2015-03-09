@@ -28,7 +28,8 @@ var Engine = (function(global) {
     canvas.width = 550;
     // canvas.width = 1005;
     // canvas.height = 776;
-    canvas.height = 545;
+    // canvas.height = 545;
+    canvas.height = 600;
     doc.body.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
@@ -100,6 +101,7 @@ var Engine = (function(global) {
         });
 
         player.update(dt);
+        key.update(dt);
     }
 
     /* This function initially draws the "game level", it will then call
@@ -114,6 +116,7 @@ var Engine = (function(global) {
          */
         var rowImages = [
                 'images/grass-block.png',    // Row 2 of 2 of grass
+                'images/grass-block.png',    // Row 2 of 2 of grass
                 'images/water-block.png',   // Top row is water
                 'images/water-block.png',   // Top row is water
                 'images/water-block.png',   // Top row is water
@@ -127,7 +130,7 @@ var Engine = (function(global) {
                 // 'images/grass-block.png',   // Row 1 of 2 of grass
                 'images/grass-block.png'    // Row 2 of 2 of grass
             ],
-            numRows = 11,
+            numRows = 12,
             numCols = 10,
             row, col;
 
@@ -169,6 +172,7 @@ var Engine = (function(global) {
         });
 
         player.render();
+        key.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -191,6 +195,7 @@ var Engine = (function(global) {
         'images/char-boy.png',
         'images/rock11.png',
         'images/wood_plank.png',
+        'images/Key.png',
         'images/car2.png'
     ]);
     Resources.onReady(init);

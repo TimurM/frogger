@@ -24,5 +24,5 @@ Enemy.prototype.checkReset = function() {
 
 Enemy.prototype.reset = function() {
   this.x = 0;
-  this.y = Math.floor(Math.random() * 2)*90 + 260;
+  this.y = Math.floor(Math.random() * 2)*90 + 305;
 }

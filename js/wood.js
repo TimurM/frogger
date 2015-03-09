@@ -18,5 +18,5 @@ Wood.prototype.checkReset = function() {
 
 Wood.prototype.reset = function() {
   this.x = 555;
-  this.y = Math.floor(Math.random() * 2)*90 + 45;
+  this.y = Math.floor(Math.random() * 2)*90 + 90;
 }

@@ -1,11 +1,11 @@
-var currentScore = 0; 
+var currentScore = 0;
 
 var genWaterItems = function() {
   var waterItems = [];
 
   for(var i = 0; i < 2; i++) {
     var x = i * 180 + 50*i;
-    var y = Math.floor(Math.random() * 2)*90 + 45;
+    var y = Math.floor(Math.random() * 2)*90 + 90;
     var newWood = new Wood(x, y);
     waterItems.push(newWood);
   }
@@ -22,16 +22,15 @@ var genWaterItems = function() {
 var genEnemies = function() {
   var enemies = [];
   for(var i=0; i < 5; i++) {
-    // var x = (Math.random(1)*600) + 100;
     var x = i * 230;
-    var y = Math.floor(Math.random() * 2)*90 + 260;
+    var y = Math.floor(Math.random() * 2)*90 + 305;
     var newEnemy = new Enemy(x, y);
     enemies.push(newEnemy);
   }
 
   for(var i = 0; i < 5; i++) {
     var x = i * 230;
-    var y = Math.floor(Math.random() * 2)*90  + 280;
+    var y = Math.floor(Math.random() * 2)*90  + 325;
     var newCar = new Car(x, y);
     enemies.push(newCar);
   }
@@ -40,6 +39,7 @@ var genEnemies = function() {
 var allEnemies = genEnemies();
 var allWaterItems = genWaterItems();
 var player = new Player();
+var key = new Key();
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {

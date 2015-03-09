@@ -9,5 +9,5 @@ Car.prototype.constructor = Car;
 
 Car.prototype.reset = function() {
   this.x = 1005;
-  this.y = Math.floor(Math.random() * 2)*90  + 280;
+  this.y = Math.floor(Math.random() * 2)*90  + 325;
 }
