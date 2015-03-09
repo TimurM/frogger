@@ -1,9 +1,3 @@
-// var $score = $(".current")
-//
-// var currentScore = 0;
-// var highScore = 0;
-
-
 var Player = function() {
   this.sprite = 'images/char-boy.png';
   this.x = 250;
