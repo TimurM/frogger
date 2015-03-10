@@ -56,9 +56,9 @@ Player.prototype.reset = function(x, y) {
 
 Player.prototype.handleInput = function(key) {
   if((key === 'up') && (this.y > 20)) {
-      this.y -= 30;
+      this.y -= 35;
   }else if((key === 'down') && (this.y < 460)) {
-    this.y += 30;
+    this.y += 35;
   }else if((key === 'left') && (this.x > 0)) {
     this.x -= 30;
   }else if((key === 'right') && (this.x < 500)) {
