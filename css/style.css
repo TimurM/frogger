@@ -2,3 +2,25 @@ body {
     text-align: center;
     margin-top: 0px;
 }
+
+.current {
+  display: block;
+  float: left;
+  width: 230px;
+  padding-left: 50px;
+  padding-top: 50px;
+  margin-right: 0px;
+  text-wrap: normal;
+}
+
+.instructions {
+  display: block;
+  float: left;
+  padding-top: 50px;
+  margin-left: 0px;
+}
+
+.instructions > h1 {
+  padding-bottom: 55px;
+  text-align: left;
+}
