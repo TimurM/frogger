@@ -7,8 +7,8 @@ var Player = function() {
 
 Player.prototype.update = function(dt) {
   setInterval(this.render(), dt);
-  player.checkCollisions();
   player.checkWin();
+  player.checkCollisions();
   player.checkSafeItem();
 }
 
@@ -26,7 +26,10 @@ Player.prototype.checkCollisions = function() {
 }
 
 Player.prototype.checkWin = function() {
-  if ((key.x - player.x) < 10 && (key.x - player.x) > -10 && Math.abs(player.y - key.y) < 30) {
+  console.log("key.x " + key.x);
+  console.log("player.x " + player.x);
+  console.log("player.y " + player.y);
+  if ((key.x - player.x) < 20 && (key.x - player.x) > -20 && Math.abs(player.y - key.y) < 20) {
     player.reset();
   }
 }

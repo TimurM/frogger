@@ -12,7 +12,7 @@ var genWaterItems = function() {
 
   for(var i = 0; i < 2; i++) {
     var x = i * 180 + 50*i;
-    var y = Math.floor(Math.random() * 2)*90;
+    var y = Math.floor(Math.random() * 2)*90 + 45;
     var newRock = new Rock(x, y);
     waterItems.push(newRock);
   }
