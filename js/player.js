@@ -26,11 +26,10 @@ Player.prototype.checkCollisions = function() {
 }
 
 Player.prototype.checkWin = function() {
-  console.log("key.x " + key.x);
-  console.log("player.x " + player.x);
-  console.log("player.y " + player.y);
+
   if ((key.x - player.x) < 20 && (key.x - player.x) > -20 && Math.abs(player.y - key.y) < 20) {
     player.reset();
+    key.reset();
   }
 }
 

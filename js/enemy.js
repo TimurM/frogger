@@ -2,7 +2,7 @@ var Enemy = function(x, y) {
   this.sprite = 'images/enemy-bug.png';
   this.x = x;
   this.y = y;
-  this.speed = 2;
+  this.speed = 1.5;
 }
 
 Enemy.prototype.update = function(dt) {
