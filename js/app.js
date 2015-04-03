@@ -3,14 +3,14 @@ var currentScore = 0;
 var genWaterItems = function() {
   var waterItems = [];
 
-  for(var i = 0; i < 2; i++) {
+  for(var i = 0; i < 3; i++) {
     var x = i * 180 + 50*i;
     var y = Math.floor(Math.random() * 2)*90 + 90;
     var newWood = new Wood(x, y);
     waterItems.push(newWood);
   }
 
-  for(var i = 0; i < 2; i++) {
+  for(var i = 0; i < 4; i++) {
     var x = i * 180 + 50*i;
     var y = Math.floor(Math.random() * 2)*90 + 45;
     var newRock = new Rock(x, y);
